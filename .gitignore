@@ -1,0 +1,22 @@
+# Keil 编译产物
+Objects/
+Listings/
+DebugConfig/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.dep
+*.iex
+*.sct
+*.lnp
+*.htm
+*.uvguix.*
+*.bak
+*.build_log.htm
+# 编辑器
+.vscode/
