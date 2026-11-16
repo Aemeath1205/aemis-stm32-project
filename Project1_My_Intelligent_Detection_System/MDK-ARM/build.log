@@ -1,0 +1,71 @@
+*** Using Compiler 'V6.24', folder: 'C:\Keil5\core\ARM\ARMCLANG\Bin'
+Build target 'Project1_My_Intelligent_Detection_System'
+../Interface/aht20.c(15): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+   15 |         LOG_DEBUG("Send_Measure_Command: Transmit cmd failed");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
+   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
+      |                          ~~
+   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
+      |            ^~~~~~~~~~~
+../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
+   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/aht20.c(22): warning: passing 'volatile uint8_t[6]' (aka 'volatile unsigned char[6]') to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+   22 |     if(HAL_OK != HAL_I2C_Master_Receive_DMA(&AHT20_I2C, AHT20_ADDRESS, g_ori_data, 6))
+      |                                                                        ^~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_i2c.h(589): note: passing argument to parameter 'pData' here
+  589 | HAL_StatusTypeDef HAL_I2C_Master_Receive_DMA(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size);
+      |                                                                                                     ^
+../Interface/aht20.c(24): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+   24 |         LOG_DEBUG("Read_Measure_Data: Receive data failed");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
+   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
+      |                          ~~
+   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
+      |            ^~~~~~~~~~~
+../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
+   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/aht20.c(58): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+   58 |         LOG_DEBUG("Aht20_Init: I2C Transmit failed");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
+   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
+      |                          ~~
+   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
+      |            ^~~~~~~~~~~
+../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
+   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/aht20.c(64): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+   64 |         LOG_DEBUG("Aht20_Init: I2C Receive failed");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
+   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
+      |                          ~~
+   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
+      |            ^~~~~~~~~~~
+../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
+   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/aht20.c(72): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+   72 |             LOG_DEBUG("Aht20_Init: I2C Transmit Init_Cmd failed");
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
+   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
+      |                          ~~
+   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
+      |            ^~~~~~~~~~~
+../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
+   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+compiling aht20.c...
+compiling i2c_isr.c...
+linking...
+Program Size: Code=8562 RO-data=378 RW-data=12 ZI-data=1348  
+FromELF: creating hex file...
+"Project1_My_Intelligent_Detection_System\Project1_My_Intelligent_Detection_System.axf" - 0 Error(s), 6 Warning(s).
+Build Time Elapsed:  00:00:03
