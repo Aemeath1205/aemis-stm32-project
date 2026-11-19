@@ -15,6 +15,19 @@ void mq2_test(void)
     LOG_DEBUG("MQ2 PPM: %.2f", mq2_ppm);
 }
 
+void oled_test(void)
+{
+    char str[12];
+    snprintf(str, sizeof(str), "Tem: %.2fC", aht20_data.temperature);
+    oled_show_string(0, 0, str, OLED_8X16);
+    snprintf(str, sizeof(str), "Hum: %.2f%%", aht20_data.humidity);
+    oled_show_string(0, 16, str, OLED_8X16);
+    snprintf(str, sizeof(str), "MQ2: %.2f", mq2_ppm);
+    oled_show_string(0, 32, str, OLED_8X16);
+
+    oled_update_screen();
+}
+
 void alert_test(void)
 {
     mq2_read_data();
@@ -30,3 +43,5 @@ void alert_test(void)
         alert_waterfall_light_off();
     }
 }
+
+

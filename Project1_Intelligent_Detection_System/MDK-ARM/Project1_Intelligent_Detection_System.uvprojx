@@ -850,6 +850,11 @@
               <FileType>1</FileType>
               <FilePath>..\Interface\alert.c</FilePath>
             </File>
+            <File>
+              <FileName>oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Interface\oled.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -874,6 +879,11 @@
               <FileName>log.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Common\log.c</FilePath>
+            </File>
+            <File>
+              <FileName>font.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Common\font.h</FilePath>
             </File>
           </Files>
         </Group>

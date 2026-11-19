@@ -20,3 +20,4 @@ DebugConfig/
 *.build_log.htm
 # 编辑器
 .vscode/
+*.log

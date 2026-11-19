@@ -57,6 +57,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define System_LED1_Pin GPIO_PIN_8
+#define System_LED1_GPIO_Port GPIOF
+#define System_LED2_Pin GPIO_PIN_9
+#define System_LED2_GPIO_Port GPIOF
+#define System_LED3_Pin GPIO_PIN_10
+#define System_LED3_GPIO_Port GPIOF
+#define System_LED4_Pin GPIO_PIN_11
+#define System_LED4_GPIO_Port GPIOF
+#define LED_CTRL_Pin GPIO_PIN_1
+#define LED_CTRL_GPIO_Port GPIOB
+#define BUZZER_Pin GPIO_PIN_15
+#define BUZZER_GPIO_Port GPIOG
 
 /* USER CODE BEGIN Private defines */
 

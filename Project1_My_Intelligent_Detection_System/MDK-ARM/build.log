@@ -1,71 +1,32 @@
 *** Using Compiler 'V6.24', folder: 'C:\Keil5\core\ARM\ARMCLANG\Bin'
 Build target 'Project1_My_Intelligent_Detection_System'
-../Interface/aht20.c(15): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
-   15 |         LOG_DEBUG("Send_Measure_Command: Transmit cmd failed");
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
-   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
-      |                          ~~
-   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
-      |            ^~~~~~~~~~~
-../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
-   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Interface/aht20.c(22): warning: passing 'volatile uint8_t[6]' (aka 'volatile unsigned char[6]') to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
-   22 |     if(HAL_OK != HAL_I2C_Master_Receive_DMA(&AHT20_I2C, AHT20_ADDRESS, g_ori_data, 6))
-      |                                                                        ^~~~~~~~~~
-../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_i2c.h(589): note: passing argument to parameter 'pData' here
-  589 | HAL_StatusTypeDef HAL_I2C_Master_Receive_DMA(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size);
-      |                                                                                                     ^
-../Interface/aht20.c(24): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
-   24 |         LOG_DEBUG("Read_Measure_Data: Receive data failed");
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
-   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
-      |                          ~~
-   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
-      |            ^~~~~~~~~~~
-../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
-   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Interface/aht20.c(58): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
-   58 |         LOG_DEBUG("Aht20_Init: I2C Transmit failed");
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
-   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
-      |                          ~~
-   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
-      |            ^~~~~~~~~~~
-../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
-   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Interface/aht20.c(64): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
-   64 |         LOG_DEBUG("Aht20_Init: I2C Receive failed");
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
-   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
-      |                          ~~
-   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
-      |            ^~~~~~~~~~~
-../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
-   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Interface/aht20.c(72): warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
-   72 |             LOG_DEBUG("Aht20_Init: I2C Transmit Init_Cmd failed");
-      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Common\log.h(14): note: expanded from macro 'LOG_DEBUG'
-   13 |     printf(">>>LOGDEBUG:[%d][%d]"format"\r\n",\
-      |                          ~~
-   14 |            FILE_NAME_2, __LINE__, ##__VA_ARGS__)
-      |            ^~~~~~~~~~~
-../Common\log.h(10): note: expanded from macro 'FILE_NAME_2'
-   10 | #define FILE_NAME_2 strrchr(FILE_NAME_1, '/') == NULL ? FILE_NAME_1 : strrchr(FILE_NAME_1, '/') + 1
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-6 warnings generated.
-compiling aht20.c...
-compiling i2c_isr.c...
-linking...
-Program Size: Code=8562 RO-data=378 RW-data=12 ZI-data=1348  
-FromELF: creating hex file...
-"Project1_My_Intelligent_Detection_System\Project1_My_Intelligent_Detection_System.axf" - 0 Error(s), 6 Warning(s).
-Build Time Elapsed:  00:00:03
+../Interface/oled.c(42): error: too few arguments to function call, expected 2, have 1
+   42 |     oled_write_command(0xB0 | (page & 0x0F));
+      |     ~~~~~~~~~~~~~~~~~~                     ^
+../Interface/oled.c(28): note: 'oled_write_command' declared here
+   28 | static void oled_write_command(const uint8_t* command, uint16_t size)
+      |             ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/oled.c(43): error: too few arguments to function call, expected 2, have 1
+   43 |     oled_write_command(0x00 | (column & 0x0F));
+      |     ~~~~~~~~~~~~~~~~~~                       ^
+../Interface/oled.c(28): note: 'oled_write_command' declared here
+   28 | static void oled_write_command(const uint8_t* command, uint16_t size)
+      |             ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/oled.c(44): error: too few arguments to function call, expected 2, have 1
+   44 |     oled_write_command(0x10 | ((column >> 4) & 0x0F));
+      |     ~~~~~~~~~~~~~~~~~~                              ^
+../Interface/oled.c(28): note: 'oled_write_command' declared here
+   28 | static void oled_write_command(const uint8_t* command, uint16_t size)
+      |             ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Interface/oled.c(91): error: call to undeclared function 'Oled_Update_Buffer_to_Oled'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   91 |     Oled_Update_Buffer_to_Oled();
+      |     ^
+../Interface/oled.c(91): note: did you mean 'Oled_Update_Buffer_To_Oled'?
+../Interface\oled.h(26): note: 'Oled_Update_Buffer_To_Oled' declared here
+   26 | void Oled_Update_Buffer_To_Oled(void);
+      |      ^
+4 errors generated.
+compiling oled.c...
+"Project1_My_Intelligent_Detection_System\Project1_My_Intelligent_Detection_System.axf" - 4 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

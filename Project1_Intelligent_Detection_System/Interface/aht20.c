@@ -141,7 +141,7 @@ void aht20_start(void)
     }
     else if(aht20_status == DATA_PARSE_FINISH)
     {
-        printf(">>> %f %f\n", aht20_data.humidity, aht20_data.temperature);
+        // printf(">>> %f %f\n", aht20_data.humidity, aht20_data.temperature);
         aht20_status = READ_DATA_INIT;
     }
 }

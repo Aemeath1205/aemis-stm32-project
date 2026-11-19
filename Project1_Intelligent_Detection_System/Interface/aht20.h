@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "i2c.h"
 #include "log.h"
 

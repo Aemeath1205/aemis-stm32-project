@@ -1,11 +1,11 @@
-#include "app.h"
+﻿#include "app.h"
 
 static void app_handle_light_test()
 {
     static uint32_t start_time = 0;
     if(HAL_GetTick() - start_time >= 500)
     {
-        HAL_GPIO_TogglePin();
+        HAL_GPIO_TogglePin(LED_CTRL_GPIO_Port, LED_CTRL_Pin);
         start_time = HAL_GetTick();
     }
 }
@@ -15,6 +15,7 @@ void app_init(void)
     console_init(&huart1);
     aht20_init();
     mq2_init();
+    oled_init();
 }
 
 void app_start(void)
@@ -27,7 +28,7 @@ void app_start(void)
     {
         app_handle_light_test();
         // aht20_test();
-        mq2_test();
+        oled_test();
         HAL_Delay(1000);
     }
 }

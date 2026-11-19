@@ -63,6 +63,8 @@ void Error_Handler(void);
 #define System_LED2_GPIO_Port GPIOF
 #define System_LED3_Pin GPIO_PIN_10
 #define System_LED3_GPIO_Port GPIOF
+#define LED_CTRL_Pin GPIO_PIN_1
+#define LED_CTRL_GPIO_Port GPIOB
 #define System_LED4_Pin GPIO_PIN_11
 #define System_LED4_GPIO_Port GPIOF
 #define BUZZER_Pin GPIO_PIN_15
