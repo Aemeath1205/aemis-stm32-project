@@ -17,3 +17,4 @@ void app_start(void);
 
 extern uint8_t key_num;
 extern threshold_t g_td;
+extern uint8_t menu;
