@@ -1,10 +1,7 @@
 #pragma once
 
-#include "console.h"
-#include "log.h"
-#include "aht20.h"
-#include "test.h"
-#include "mq2.h"
+#include <stdint.h>      /* uint8_t */
+#include "menu.h"        /* threshold_t */
 
 /**
  * @brief 负责所有的初始化逻辑
@@ -17,3 +14,6 @@ void app_init(void);
  * 
  */
 void app_start(void);
+
+extern uint8_t key_num;
+extern threshold_t g_td;

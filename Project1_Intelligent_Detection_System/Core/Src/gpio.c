@@ -48,8 +48,8 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, System_LED1_Pin|System_LED2_Pin|System_LED3_Pin|System_LED4_Pin, GPIO_PIN_SET);
@@ -67,12 +67,24 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : EC11_KEY_Pin */
+  GPIO_InitStruct.Pin = EC11_KEY_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(EC11_KEY_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : LED_CTRL_Pin */
   GPIO_InitStruct.Pin = LED_CTRL_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_CTRL_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : SYS_SW2_Pin SYS_SW4_Pin SYS_SW3_Pin SYS_SW1_Pin */
+  GPIO_InitStruct.Pin = SYS_SW2_Pin|SYS_SW4_Pin|SYS_SW3_Pin|SYS_SW1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
   /*Configure GPIO pin : BUZZER_Pin */
   GPIO_InitStruct.Pin = BUZZER_Pin;

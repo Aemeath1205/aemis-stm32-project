@@ -63,10 +63,20 @@ void Error_Handler(void);
 #define System_LED2_GPIO_Port GPIOF
 #define System_LED3_Pin GPIO_PIN_10
 #define System_LED3_GPIO_Port GPIOF
+#define EC11_KEY_Pin GPIO_PIN_5
+#define EC11_KEY_GPIO_Port GPIOC
 #define LED_CTRL_Pin GPIO_PIN_1
 #define LED_CTRL_GPIO_Port GPIOB
 #define System_LED4_Pin GPIO_PIN_11
 #define System_LED4_GPIO_Port GPIOF
+#define SYS_SW2_Pin GPIO_PIN_6
+#define SYS_SW2_GPIO_Port GPIOG
+#define SYS_SW4_Pin GPIO_PIN_7
+#define SYS_SW4_GPIO_Port GPIOG
+#define SYS_SW3_Pin GPIO_PIN_8
+#define SYS_SW3_GPIO_Port GPIOG
+#define SYS_SW1_Pin GPIO_PIN_10
+#define SYS_SW1_GPIO_Port GPIOG
 #define BUZZER_Pin GPIO_PIN_15
 #define BUZZER_GPIO_Port GPIOG
 
