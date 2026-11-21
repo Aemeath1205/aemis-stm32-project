@@ -277,7 +277,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x80000</Size>
+                <Size>0x7f800</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -1027,6 +1027,16 @@
               <FileName>key.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Interface\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Interface\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>tb6612.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Interface\tb6612.c</FilePath>
             </File>
           </Files>
         </Group>

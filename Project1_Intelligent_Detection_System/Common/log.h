@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define LOG_ENABLE 1 /*1：打开日志输出 2：关闭日志输出*/
+#define LOG_ENABLE 0 /*1：打开日志输出 2：关闭日志输出*/
 
 #if(LOG_ENABLE == 1)
 /*日志启用时的逻辑*/

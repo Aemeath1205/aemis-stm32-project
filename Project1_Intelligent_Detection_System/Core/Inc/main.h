@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define AIN1_Pin GPIO_PIN_13
+#define AIN1_GPIO_Port GPIOC
 #define System_LED1_Pin GPIO_PIN_8
 #define System_LED1_GPIO_Port GPIOF
 #define System_LED2_Pin GPIO_PIN_9
@@ -65,6 +67,8 @@ void Error_Handler(void);
 #define System_LED3_GPIO_Port GPIOF
 #define EC11_KEY_Pin GPIO_PIN_5
 #define EC11_KEY_GPIO_Port GPIOC
+#define STBY_Pin GPIO_PIN_0
+#define STBY_GPIO_Port GPIOB
 #define LED_CTRL_Pin GPIO_PIN_1
 #define LED_CTRL_GPIO_Port GPIOB
 #define System_LED4_Pin GPIO_PIN_11
@@ -79,6 +83,8 @@ void Error_Handler(void);
 #define SYS_SW1_GPIO_Port GPIOG
 #define BUZZER_Pin GPIO_PIN_15
 #define BUZZER_GPIO_Port GPIOG
+#define AIN2_Pin GPIO_PIN_8
+#define AIN2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

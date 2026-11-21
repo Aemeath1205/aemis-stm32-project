@@ -1,5 +1,6 @@
 #include "key.h"
 #include "app.h"
+#include "tim.h"
 
 extern uint8_t key_num;
 
@@ -56,7 +57,7 @@ static void key_process(GPIO_PinState status, key_status_t* key)
 
 void key_init(void)
 {
-
+    HAL_TIM_Base_Start_IT(&htim2);
 }
 
 void key_scan(void)

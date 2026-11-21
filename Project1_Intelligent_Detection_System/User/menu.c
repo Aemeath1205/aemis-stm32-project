@@ -3,7 +3,7 @@
 #include "math.h"
 // extern volatile aht20_data_t aht20_data;
 // extern float mq2_ppm;
-uint8_t fan_is_running = 0;
+extern uint8_t fan_is_running;
 extern threshold_t g_td; 
 
 static void menu_oled_show_progress_bar(uint8_t progress)

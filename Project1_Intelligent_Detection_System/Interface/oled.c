@@ -62,8 +62,8 @@ void oled_init(void)
     oled_clear();
     oled_update_screen();
     LOG_DEBUG("OLED init success");
+  
 }
-
 void oled_clear(void)
 {
     memset(oled_data_buffer, 0, sizeof(oled_data_buffer));

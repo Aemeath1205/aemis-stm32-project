@@ -45,20 +45,30 @@ void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(AIN1_GPIO_Port, AIN1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, System_LED1_Pin|System_LED2_Pin|System_LED3_Pin|System_LED4_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_CTRL_GPIO_Port, LED_CTRL_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, STBY_Pin|LED_CTRL_Pin|AIN2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : AIN1_Pin */
+  GPIO_InitStruct.Pin = AIN1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(AIN1_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : System_LED1_Pin System_LED2_Pin System_LED3_Pin System_LED4_Pin */
   GPIO_InitStruct.Pin = System_LED1_Pin|System_LED2_Pin|System_LED3_Pin|System_LED4_Pin;
@@ -69,16 +79,16 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : EC11_KEY_Pin */
   GPIO_InitStruct.Pin = EC11_KEY_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(EC11_KEY_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LED_CTRL_Pin */
-  GPIO_InitStruct.Pin = LED_CTRL_Pin;
+  /*Configure GPIO pins : STBY_Pin LED_CTRL_Pin AIN2_Pin */
+  GPIO_InitStruct.Pin = STBY_Pin|LED_CTRL_Pin|AIN2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_CTRL_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SYS_SW2_Pin SYS_SW4_Pin SYS_SW3_Pin SYS_SW1_Pin */
   GPIO_InitStruct.Pin = SYS_SW2_Pin|SYS_SW4_Pin|SYS_SW3_Pin|SYS_SW1_Pin;

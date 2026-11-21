@@ -158,7 +158,7 @@ void Oled_Num_To_String(uint8_t x, uint8_t y,
     {
         char str[12];
         snprintf(str, sizeof(str), "%d", num);
-        oled_show_string(x, y, str, font_size);
+        Oled_String_To_Char(x, y, str, font_size);
     }
 }
 
@@ -167,7 +167,7 @@ void Oled_Fixed_Nums_To_String(uint8_t x, uint8_t y,
 {
     char buf[16];
     snprintf(buf, sizeof(buf), "%-*d", width, num);
-    oled_show_string(x, y, buf, font_size);
+    Oled_String_To_Char(x, y, buf, font_size);
 }
 
 /*updat buffer to oled*/

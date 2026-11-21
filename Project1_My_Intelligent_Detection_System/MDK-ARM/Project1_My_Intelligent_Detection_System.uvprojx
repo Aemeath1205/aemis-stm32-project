@@ -536,7 +536,12 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\adc.c</FilePath>
             </File>
-          </Files>
+                      <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\tim.c</FilePath>
+            </File>
+</Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32F1xx_HAL_Driver</GroupName>
@@ -667,7 +672,17 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c</FilePath>
             </File>
-          </Files>
+                      <File>
+              <FileName>stm32f1xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
+            </File>
+</Files>
         </Group>
         <Group>
           <GroupName>Drivers/CMSIS</GroupName>
@@ -702,7 +717,12 @@
               <FileType>1</FileType>
               <FilePath>..\Interface\alert.c</FilePath>
             </File>
-          </Files>
+                      <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Interface\key.c</FilePath>
+            </File>
+</Files>
         </Group>
         <Group>
           <GroupName>User</GroupName>
@@ -712,7 +732,12 @@
               <FileType>1</FileType>
               <FilePath>..\User\app.c</FilePath>
             </File>
-          </Files>
+                      <File>
+              <FileName>menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\menu.c</FilePath>
+            </File>
+</Files>
         </Group>
         <Group>
           <GroupName>Common</GroupName>
@@ -747,7 +772,12 @@
               <FileType>1</FileType>
               <FilePath>..\ISR\adc_isr.c</FilePath>
             </File>
-          </Files>
+                      <File>
+              <FileName>tim_isr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ISR\tim_isr.c</FilePath>
+            </File>
+</Files>
         </Group>
         <Group>
           <GroupName>Test</GroupName>

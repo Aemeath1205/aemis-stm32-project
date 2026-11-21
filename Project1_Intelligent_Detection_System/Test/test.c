@@ -25,6 +25,7 @@ void oled_test(void)
     oled_show_string(0, 32, str, OLED_8X16);
 
     oled_update_screen();
+    
 }
 
 void menu_test(void)

@@ -57,6 +57,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SYS_SW1_Pin GPIO_PIN_10
+#define SYS_SW1_GPIO_Port GPIOG
+#define SYS_SW2_Pin GPIO_PIN_6
+#define SYS_SW2_GPIO_Port GPIOG
+#define SYS_SW3_Pin GPIO_PIN_8
+#define SYS_SW3_GPIO_Port GPIOG
+#define SYS_SW4_Pin GPIO_PIN_7
+#define SYS_SW4_GPIO_Port GPIOG
+#define EC11_KEY_Pin GPIO_PIN_5
+#define EC11_KEY_GPIO_Port GPIOC
 #define System_LED1_Pin GPIO_PIN_8
 #define System_LED1_GPIO_Port GPIOF
 #define System_LED2_Pin GPIO_PIN_9
